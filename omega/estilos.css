@@ -1,0 +1,212 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&display=swap'); /* importar as fontes do google fonts que serão usadas no site, o ideal que seja colocada na primeira linha, pois o navegador carregará as fontes que serão usadas no site. */
+
+/* Regra utilitária para ajstes no Box Model (usar sempre! em qualquer projeto web) */
+*, *::after, *::before { box-sizing: border-box; }
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth; /* Comportamento de rolagem (suavizar a rolagem*/
+}
+
+body {
+    background-image: url(../imagens/textura-fundo.png);
+    background-attachment: fixed; /* para o background ficar fixo */
+    font-family: 'Open Sans', Verdana,Arial, sans-serif;
+}
+
+img { max-width: 100%; } /* Para imagem ficar responsiva */
+
+/* Regras de CSS Reset */
+body, h1,h2,h3, p, figure {
+    margin: 0; /* Zera os espaçamentos */
+    padding: 0;
+}
+
+a {
+    text-decoration: none; /* Tirar o sublinhado do link */
+    color: black;
+}
+
+header, footer {
+    background-color: rgba(202, 194, 194, 0.699); /* Colacar cor no fundo do cabeçalho e rodapé */
+    text-align: center; /* Centralizar o cabeçalho e rodapé */
+}
+
+header {
+    border-bottom: solid 2px;
+    margin-bottom: 7px;
+}
+
+footer { border-top: solid 2px; }
+
+/* Main é o conteúdo do site, esse css será ma regra geral */
+main {
+    width: 95%;
+    margin: auto;
+}
+
+article {
+    background-color: white;
+    box-shadow: grey 1px 1px 5px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+h1, nav, h2, h3, button {
+    font-family: 'Orbitron', verdana, sans-serif;
+}
+
+h2, h3, p { padding: 1% 0;} /* O 0 Tirou Espaçameto somente em cima e em baiXo */
+
+footer img { width: 50px;}
+
+footer h2 { font-size: 1.2rem; }
+
+footer p { font-size: 0.7rem; }
+
+section, figure { margin: 40px 0; }
+
+figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+iframe { width: 100%; }
+
+/* regras temporárias para auxílio no ajuste de espaços e alinhamentos */
+/* h1 { background-color: red; }
+h1 a { background-color: green; }
+nav { background-color: yellow; }
+nav a { background-color: lightblue; } */
+
+h1, h1 a, nav, nav a{
+    display: flex; /* Habilito ele para receber novas regras de formatação e centralização, sem o display flex o justify e align itens não funcionária */
+    justify-content: center; /* Alihar ao centro */
+    align-items: center;
+}
+
+h1 { 
+    padding: 5px 0;
+    font-size: 2.2rem 
+}
+
+h1 img { width: 50px; }
+
+nav a {
+    height: 50px;
+    font-size: 1.1rem;
+    width: 100%; /* Ele vai ocupar 100% do escpaço do nav */
+}
+
+nav a:hover, nav a:focus {
+    background-color: black; /* Cor de fundo quando passar o mouse */
+    color: white;
+}
+
+article img {
+    filter: grayscale(50%);
+    transition: 2s;/* Tempo de transição para a imagem ir escurecendo ou realçar a imagem */
+}
+
+article img:hover { filter: grayscale(0); } /* Efeito de passar o mouse */
+
+/* Regras para formulário */
+
+/* 1ª Opção */
+/* formulário */
+input, textarea {
+    border: solid 2px; /* Borda */
+    width: 100%; /* Lagura formulário */
+    padding: 12px; /* Altura do campo */
+    font-size: 0.9rem; /* Tamanho da fonte */
+}
+
+label { font-size: .7rem; }/* Label é o nome dos capos do formulário */
+
+/* 2ª opção
+# nome, #email, #assunto, #mensagem {} */
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+button:hover, button:focus {
+    background-color: blue;
+    cursor: pointer; /* altera o cursor o mouse */
+}
+
+#voltar-topo {
+    position:fixed;
+
+    /* top, bottom, left, right, z-index */
+    bottom: 5px;
+    right: 5px;
+}
+
+#voltar-topo a {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+#voltar-topo a:hover,  #voltar-topo a:focus {
+    background-color: darkblue;
+}
+
+/* Media Queries
+
+Regras especiais que aplicarão formatações de acordo
+
+com determinadas condições (a partir de certos tamanhos de tela) */
+
+@media screen and (min-width: 700px){
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 750px){
+    .grupo {
+        display: flex;
+        justify-content: space-between;
+
+        /* Modo quebra de linha/row */
+        flex-wrap: wrap;
+    }
+    
+        .grupo section, .grupo figure {
+        width: 49%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    html { font-size: 20px;}
+}
+
+@media screen and (min-width: 1000px) {
+    .container, main { max-width: 1000px; }
+
+    header {
+        position: fixed;
+        z-index: 100;/* Ordem de empilhameto, objeto fica mais para frente e mais para trás */
+        width: 100%; /* Para a largura ficar em 100% */
+        top: 0; /* Para o cabeçalho ficar fixo no topo */
+    }
+    #voltar-topo { display: none; } /* para esconder voltar ao topo quando a tela for mais que 1000px */
+
+    #topo, #o-que-fazemos, #nossas-equipes, #contato {
+        padding-top: 75px;
+    }
+}
+
