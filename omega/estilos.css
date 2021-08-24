@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-image: url(../imagens/textura-fundo.png);
+    background-image: url(imagens/textura-fundo.png);
     background-attachment: fixed; /* para o background ficar fixo */
     font-family: 'Open Sans', Verdana,Arial, sans-serif;
 }
