@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap');
+
+*, *::after, *::before { box-sizing: border-box; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline: 10px;
+}
+
+
+header a {
+    text-decoration: none;
+    color: #850000;
+    font-size: 1rem;  
+}
+
+header p {font-size: 1rem;}
+
+
+.imagemreheader {
+    margin-top: 15px;
+    margin-bottom: 15px;
+} 
+
+.imagemwhatsapp {
+    margin-top: -10px;
+}
+
+.telefone {
+    margin-top: 10px;
+    margin-bottom: 25px; }
+
+html {
+    font-size: 22px;
+    font-family:'Kaisei HarunoUmi', serif;
+    font-weight: bold;
+    text-align: justify;
+    color: #850000;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+img {max-width: 100%;}
+
+.fotos, .carrossel { text-align: center; }
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8b42d;
+    align-items: center;
+    padding-block: 7px;    
+}
+
+nav a {
+    text-decoration: none;
+    color: #850000;
+    font-size: 1.1rem;
+    text-align: center;
+    font: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6px;
+}
+
+nav a:hover, nav a:focus {
+    background-color: #850000;
+    color: #f8b42d;
+    
+}
+
+.cotacao {
+    background-color: #1aa918;
+    color: white;
+    padding: 6px;
+    padding-inline: 20px;
+}
+
+h2 {
+    background-color: #f8b42d;
+    font-family: Arial, Helvetica, sans-serif;
+    font: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 8px;
+    margin-top: 60px;
+}
+
+.servicos {
+    background-color: #f8b42d;
+    color: black;
+    text-align: center;
+    margin: 30px;
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;   
+}
+
+.gruposervicos {
+padding: 15px;
+margin: 15px;}
+
+.servicos img {
+    width: 10%;
+    text-align: center; }
+
+section h3 {
+    font-size: 1.3rem ;
+    text-align: center;
+}
+
+.estrutura {
+    padding-top: 15px; 
+    font-size: 1.1rem;
+}
+
+section p { text-align: justify; }
+
+.botao {
+    background-color: #1aa918;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 55px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    }
+
+.botao a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+a:hover, a:focus { background-color: rgba(245, 245, 245, 0.253); }
+
+article { margin: 15px;}
+
+
+input, textarea {
+    border: solid 2px;
+    width: 100%; 
+    padding: 12px; 
+    font-size: 0.9rem;
+}
+
+label { font-size: .9rem; }
+
+.formulario {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+button {
+    border: none;
+    background-color: #850000;
+    color: #f8b42d;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+button:hover, button:focus {
+    background-color: #f8b42d;
+    color:#850000;
+    cursor: pointer;
+}
+
+footer { 
+    text-align: center;
+    line-height: 1rem;
+    padding-bottom: 15px;
+}
+
+
+footer img {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    
+}
+
+footer a { text-decoration: none;
+color: #850000;}
+
+aside img {
+    max-width: 17%;
+    padding-top: 0;
+    padding-right: 5px;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 0px;
+}
+
+
+
+#voltar-topo {
+    position:fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+#voltar-topo a {
+    background-color: #850000;
+    color: #f8b42d;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+#voltar-topo a:hover,  #voltar-topo a:focus {
+    color: whitesmoke;
+}
+
+@media screen and (min-width: 1025px) {
+    .rodape { display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        
+    }
+    .rodapegeral { display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    }
+} 
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+    .tel { display: none;}
+    .html { max-width: 100%; }
+}
+
+@media screen and (max-width: 800px) {
+    html { font-size: 18px; }
+    .botao { font-size: 1.6rem;
+            padding-top: 5px;
+    }
+    
+    header {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    
+}
+
+@media screen and (max-width: 750px) {
+    nav a { font-size: 1.05rem;}
+    .login { max-width: 85%;}
+    .botao {
+        margin-top: 30px;
+        margin-bottom: 35px;
+    }
+    
+}
+
+@media screen and (max-width:670px) {
+    .imagemreheader {
+        max-width: 35%;
+        padding-left: 15px;
+    }
+    
+    .header { padding-right: 10px; }
+}
+
+@media screen and (max-width: 620px) {
+    .botao { 
+        font-size: 1.3rem; 
+        padding-top: 9px;
+    }
+    h2 { margin-top: 30px; }
+    
+      
+}
+
+@media screen and (max-width: 590px) {
+    .cotacao { font-size: 1.1rem;
+    padding: 3px;}
+    .login {max-width: 75%;}
+  
+}
+
+@media screen and (max-width: 550px) {
+   .cotacao { display: none;}
+       
+}
+
+@media screen and (max-width: 530px) {
+    .logowhatsapp {display: none; }
+    .whatsapp { margin-top: 35px;
+    margin-left: 20px;}
+    .login { margin-right: -30px; }
+    .imagemreheader { margin-left: -20px;}
+    .botao { 
+        font-size: 1.1rem;
+        padding-top: 12px;
+    }
+    
+}
+
+@media screen and (max-width:490px) {
+    h2 { font-size: 1.2rem;}
+    .formulario { text-align: justify; }
+           
+}
+
+@media screen and (max-width: 440px) {
+    .botao {font-size: 0.9rem;}
+    .gruposervicos {
+        margin: 0px; 
+    }
+    .servicos {
+        display:flex;
+        justify-content: space-around;
+        margin: 0;
+        margin-top: 25px;}
+}
+    
+@media screen and (max-width: 400px) {
+    h2 { font-size: 1rem; }
+    .botao {font-size: 0.8rem; 
+    padding-top: 15px;}
+    nav a { font-size: 0.8rem;}   
+}
+
+@media screen and (max-width: 330px) {
+    .botao {
+        font-size: 0.7rem; 
+        padding-top: 20px;
+    }
+}
