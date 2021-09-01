@@ -218,7 +218,8 @@ aside img {
 }
 
 #voltar-topo a:hover,  #voltar-topo a:focus {
-    color: whitesmoke;
+    color:#850000;
+    background-color: #f8b42d;
 }
 
 @media screen and (min-width: 1025px) {
